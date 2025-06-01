@@ -55,4 +55,4 @@ select vote_id as ID_do_voto, candidate_id as Candidato, region_id as ID_da_regi
 
 select candidate_id as Candidato, max(vote_count) as Maior_Voto, min(vote_count) as Menor_voto, sum(vote_count) as Soma_dos_votos, avg(vote_count) as Média from votes group by candidate_id;
 
-select candidate_id as Candidato, avg(vote_count) as Média_dos_votos from votes group by candidate_id having avg(vote_count)
+select candidate_id as Candidato, avg(vote_count) as Média_dos_votos from votes group by candidate_id having avg(vote_count) > 300
